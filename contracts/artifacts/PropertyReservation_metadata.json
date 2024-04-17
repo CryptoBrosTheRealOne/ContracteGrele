@@ -1,0 +1,132 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract PropertyManagement",
+						"name": "_propertyManagement",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "propertyId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "checkIn",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "checkOut",
+						"type": "uint256"
+					}
+				],
+				"name": "ReservationCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "propertyManagement",
+				"outputs": [
+					{
+						"internalType": "contract PropertyManagement",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_propertyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_checkIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_checkOut",
+						"type": "uint256"
+					}
+				],
+				"name": "reserveProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PropertyReservation.sol": "PropertyReservation"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PropertyManagement.sol": {
+			"keccak256": "0xeeadc9b5ffd1308f88b42d1d58930568a70ff87eb9b1fc95aa42e8a354cbea5c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://1048c04c0401a12ae4239623bd88daf4b563645f67254d1c777f2b708e1ebe31",
+				"dweb:/ipfs/QmWR1KS2XZyYtcGUF2TEveYd6SXvXxdgB6q1doQX4r9qwf"
+			]
+		},
+		"contracts/PropertyReservation.sol": {
+			"keccak256": "0x8a0fa51a4a9ad10a6a51a79f9746bc8031c9f668b91cf9d7d7a5f75ad71f2682",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://d23dc31b7d25372f575149f5c208d607229bf646ce07208e715485034c7a2671",
+				"dweb:/ipfs/QmcEWRaaSUNty2bzwbBfm4yo8CLzMhhfodtTo67cyod1NL"
+			]
+		}
+	},
+	"version": 1
+}
