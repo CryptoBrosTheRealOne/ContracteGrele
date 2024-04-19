@@ -53,7 +53,7 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_location",
+						"name": "_name",
 						"type": "string"
 					},
 					{
@@ -65,9 +65,42 @@
 						"internalType": "uint256",
 						"name": "_pricePerNight",
 						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_latitude",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_longitude",
+						"type": "int256"
 					}
 				],
 				"name": "addProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "propertyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					}
+				],
+				"name": "bookProperty",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -96,8 +129,18 @@
 							},
 							{
 								"internalType": "string",
-								"name": "location",
+								"name": "name",
 								"type": "string"
+							},
+							{
+								"internalType": "int256",
+								"name": "latitude",
+								"type": "int256"
+							},
+							{
+								"internalType": "int256",
+								"name": "longitude",
+								"type": "int256"
 							},
 							{
 								"internalType": "string",
@@ -110,9 +153,21 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "bool",
-								"name": "available",
-								"type": "bool"
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "startDate",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "endDate",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct PropertyManagement.Period[]",
+								"name": "bookedPeriods",
+								"type": "tuple[]"
 							}
 						],
 						"internalType": "struct PropertyManagement.Property",
@@ -158,8 +213,18 @@
 					},
 					{
 						"internalType": "string",
-						"name": "location",
+						"name": "name",
 						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "latitude",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "longitude",
+						"type": "int256"
 					},
 					{
 						"internalType": "string",
@@ -170,11 +235,6 @@
 						"internalType": "uint256",
 						"name": "pricePerNight",
 						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "available",
-						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -189,24 +249,6 @@
 					}
 				],
 				"name": "removeProperty",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_propertyId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "_available",
-						"type": "bool"
-					}
-				],
-				"name": "updateAvailability",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -240,11 +282,11 @@
 	},
 	"sources": {
 		"contracts/PropertyManagement.sol": {
-			"keccak256": "0x82cd63faf396918e72a36ab5553b294b9d1d8c47d7be572a3fca1edd4b4791c7",
+			"keccak256": "0xc7c98d3a285d2b55dd789081f5c18f665f46df5d2d8fb228a436336c6fa688f5",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://93af5ed9abb6b1cf7a353c97af467767375b22f24948b0c541a71078f79ec9b6",
-				"dweb:/ipfs/QmYy3HwF9C3oyAKcHRnvcX7xgmtahVgNoZWudMrqXee4xz"
+				"bzz-raw://f66d7fa9fe8d2b67cc7eccb1ac6d6470b15ce8bcb98362acde934015fc14709f",
+				"dweb:/ipfs/QmbYFbUWEpJnkYaHYV43voBDdG79Sr1PeYnmkhs6AcQSBE"
 			]
 		}
 	},

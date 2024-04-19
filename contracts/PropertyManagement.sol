@@ -3,13 +3,20 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 contract PropertyManagement {
+    struct Period {
+        uint256 startDate;
+        uint256 endDate;
+    }
+
     struct Property {
         uint256 id;
         address owner;
-        string location;
+        string name;
+        int256 latitude;
+        int256 longitude;
         string description;
         uint256 pricePerNight;
-        bool available;
+        Period[] bookedPeriods;
     }
 
     event PropertyAdded(
@@ -30,6 +37,7 @@ contract PropertyManagement {
         );
         _;
     }
+    
     // Modifier to check if property ID is valid
     modifier validPropertyId(uint256 _propertyId) {
         require(_propertyId < nextPropertyId, "Invalid property ID");
@@ -37,28 +45,30 @@ contract PropertyManagement {
     }
 
     function addProperty(
-        string memory _location,
+        string memory _name,
         string memory _description,
-        uint256 _pricePerNight
+        uint256 _pricePerNight,
+        int256 _latitude,
+        int256 _longitude
     ) external {
-        properties[nextPropertyId] = Property({
-            id: nextPropertyId,
-            owner: msg.sender,
-            location: _location,
-            description: _description,
-            pricePerNight: _pricePerNight,
-            available: true
-        });
+        Property storage p = properties[nextPropertyId];
+        p.id = nextPropertyId;
+        p.owner = msg.sender;
+        p.name = _name;
+        p.latitude = _latitude;
+        p.longitude = _longitude;
+        p.description = _description;
+        p.pricePerNight = _pricePerNight;
 
-        emit PropertyAdded(nextPropertyId, msg.sender, _location);
+        emit PropertyAdded(nextPropertyId, msg.sender, _name);
         nextPropertyId++;
     }
 
-    function updateAvailability(uint256 _propertyId, bool _available)
-        external
-        onlyOwner(_propertyId)
-    {
-        properties[_propertyId].available = _available;
+    function bookProperty(uint256 propertyId, uint256 startDate, uint256 endDate) external {
+        properties[propertyId].bookedPeriods.push(Period({
+            startDate: startDate,
+            endDate: endDate
+        }));
     }
 
     // Function to "remove" a property by marking it as unavailable and resetting its data

@@ -30,22 +30,67 @@
 						"internalType": "uint256",
 						"name": "propertyId",
 						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "checkIn",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "checkOut",
-						"type": "uint256"
 					}
 				],
 				"name": "ReservationCreated",
 				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "bookingCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "bookings",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "propertyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "bookerAddr",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -69,12 +114,12 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_checkIn",
+						"name": "startDate",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_checkOut",
+						"name": "endDate",
 						"type": "uint256"
 					}
 				],
@@ -112,19 +157,19 @@
 	},
 	"sources": {
 		"contracts/PropertyManagement.sol": {
-			"keccak256": "0xeeadc9b5ffd1308f88b42d1d58930568a70ff87eb9b1fc95aa42e8a354cbea5c",
+			"keccak256": "0xc7c98d3a285d2b55dd789081f5c18f665f46df5d2d8fb228a436336c6fa688f5",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://1048c04c0401a12ae4239623bd88daf4b563645f67254d1c777f2b708e1ebe31",
-				"dweb:/ipfs/QmWR1KS2XZyYtcGUF2TEveYd6SXvXxdgB6q1doQX4r9qwf"
+				"bzz-raw://f66d7fa9fe8d2b67cc7eccb1ac6d6470b15ce8bcb98362acde934015fc14709f",
+				"dweb:/ipfs/QmbYFbUWEpJnkYaHYV43voBDdG79Sr1PeYnmkhs6AcQSBE"
 			]
 		},
 		"contracts/PropertyReservation.sol": {
-			"keccak256": "0x8a0fa51a4a9ad10a6a51a79f9746bc8031c9f668b91cf9d7d7a5f75ad71f2682",
+			"keccak256": "0x95a781ad404064f9dc3bc35f4204f145a3ca561410e64a2a5b6546d02b3e964b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d23dc31b7d25372f575149f5c208d607229bf646ce07208e715485034c7a2671",
-				"dweb:/ipfs/QmcEWRaaSUNty2bzwbBfm4yo8CLzMhhfodtTo67cyod1NL"
+				"bzz-raw://8c026f02d2487bbb5f882422f7e69dc9847af910d6f8f8de415bcad15afeb867",
+				"dweb:/ipfs/QmTiqfRhGK4XFrwft7bu6Lynkvz2W6HWzS1dDxHMTLywGE"
 			]
 		}
 	},
