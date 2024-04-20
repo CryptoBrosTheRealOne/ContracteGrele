@@ -282,11 +282,11 @@
 	},
 	"sources": {
 		"contracts/PropertyManagement.sol": {
-			"keccak256": "0xc7c98d3a285d2b55dd789081f5c18f665f46df5d2d8fb228a436336c6fa688f5",
+			"keccak256": "0x1d02c20ceec99cc05aeb5cf5c731d2f2bff719c021b934e366ab9e078d4907a6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f66d7fa9fe8d2b67cc7eccb1ac6d6470b15ce8bcb98362acde934015fc14709f",
-				"dweb:/ipfs/QmbYFbUWEpJnkYaHYV43voBDdG79Sr1PeYnmkhs6AcQSBE"
+				"bzz-raw://b23921a47bbb921176e1b65113b05b722ba745eb27f9c2fe63ef2878be681b7d",
+				"dweb:/ipfs/QmQa7MoKxnUmD6BSaQLSkAe6dee8rtHsLLKQ6LsAAjF2E1"
 			]
 		}
 	},

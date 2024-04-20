@@ -37,7 +37,7 @@ contract PropertyManagement {
         );
         _;
     }
-    
+
     // Modifier to check if property ID is valid
     modifier validPropertyId(uint256 _propertyId) {
         require(_propertyId < nextPropertyId, "Invalid property ID");

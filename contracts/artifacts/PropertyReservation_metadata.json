@@ -79,6 +79,11 @@
 						"type": "uint256"
 					},
 					{
+						"internalType": "string",
+						"name": "propertyName",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
 						"name": "price",
 						"type": "uint256"
@@ -87,6 +92,112 @@
 						"internalType": "address",
 						"name": "bookerAddr",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBookings",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "propertyId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "startDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "endDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "propertyName",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "bookerAddr",
+								"type": "address"
+							}
+						],
+						"internalType": "struct PropertyReservation.Booking[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "myAddress",
+						"type": "address"
+					}
+				],
+				"name": "getMyBookings",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "propertyId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "startDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "endDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "propertyName",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "bookerAddr",
+								"type": "address"
+							}
+						],
+						"internalType": "struct PropertyReservation.Booking[]",
+						"name": "",
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -157,19 +268,19 @@
 	},
 	"sources": {
 		"contracts/PropertyManagement.sol": {
-			"keccak256": "0xc7c98d3a285d2b55dd789081f5c18f665f46df5d2d8fb228a436336c6fa688f5",
+			"keccak256": "0x1d02c20ceec99cc05aeb5cf5c731d2f2bff719c021b934e366ab9e078d4907a6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f66d7fa9fe8d2b67cc7eccb1ac6d6470b15ce8bcb98362acde934015fc14709f",
-				"dweb:/ipfs/QmbYFbUWEpJnkYaHYV43voBDdG79Sr1PeYnmkhs6AcQSBE"
+				"bzz-raw://b23921a47bbb921176e1b65113b05b722ba745eb27f9c2fe63ef2878be681b7d",
+				"dweb:/ipfs/QmQa7MoKxnUmD6BSaQLSkAe6dee8rtHsLLKQ6LsAAjF2E1"
 			]
 		},
 		"contracts/PropertyReservation.sol": {
-			"keccak256": "0x95a781ad404064f9dc3bc35f4204f145a3ca561410e64a2a5b6546d02b3e964b",
+			"keccak256": "0x1f2542d3a1d7f18e6305385a18815cfd7768a5d17e48f69295285a404bf35a89",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8c026f02d2487bbb5f882422f7e69dc9847af910d6f8f8de415bcad15afeb867",
-				"dweb:/ipfs/QmTiqfRhGK4XFrwft7bu6Lynkvz2W6HWzS1dDxHMTLywGE"
+				"bzz-raw://08a3e74a0b3f4aad90a9bd8e18853899114e0331a76d12f956f22f680679fccc",
+				"dweb:/ipfs/QmVnhcx9PyTn3kcedvbT9cgSyzostFELbAiD3pFK2jf5Q6"
 			]
 		}
 	},

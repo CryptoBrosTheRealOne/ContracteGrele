@@ -11,6 +11,7 @@ contract PropertyReservation {
         uint propertyId;
         uint startDate;
         uint endDate;
+        string propertyName;
         uint price;
         address bookerAddr;
     }
@@ -49,17 +50,51 @@ contract PropertyReservation {
         uint256 totalPrice = totalDays * property.pricePerNight;
 
         // Increment booking count and create the booking
-        bookingCount += 1;
+        
         bookings[bookingCount] = Booking({
             id: bookingCount,
             propertyId: _propertyId,
             startDate: startDate,
             endDate: endDate,
+            propertyName: property.name,
             price: totalPrice,
             bookerAddr: msg.sender
         });
 
+        bookingCount += 1;
         // Creăm rezervarea
         emit ReservationCreated(msg.sender, _propertyId);
     }
+
+
+    function getMyBookings(address myAddress) public view returns (Booking[] memory) {
+        uint count = 0;
+        Booking[] memory tempBookings = new Booking[](bookingCount);
+
+        for (uint i = 0; i < bookingCount; i++) {
+            if (bookings[i].bookerAddr == myAddress) {
+                tempBookings[count] = bookings[i];
+                count++;
+            }
+        }
+
+        // Create a new array with the exact size needed
+        Booking[] memory filteredBookings = new Booking[](count);
+        for (uint i = 0; i < count; i++) {
+            filteredBookings[i] = tempBookings[i];
+        }
+
+        return filteredBookings;
+    }
+
+    function getBookings() public view returns (Booking[] memory) {
+        Booking[] memory tempBookings = new Booking[](bookingCount);
+
+        for (uint i = 0; i < bookingCount; i++) {
+                tempBookings[i] = bookings[i];
+        }
+
+        return tempBookings;
+    }
+    
 }
