@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "beforeAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkAddProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkBookProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkRemoveProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/PropertyManagement_test.sol": "PropertyManagementTest"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"/contracts/PropertyManagement.sol": {
+			"keccak256": "0x1d02c20ceec99cc05aeb5cf5c731d2f2bff719c021b934e366ab9e078d4907a6",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b23921a47bbb921176e1b65113b05b722ba745eb27f9c2fe63ef2878be681b7d",
+				"dweb:/ipfs/QmQa7MoKxnUmD6BSaQLSkAe6dee8rtHsLLKQ6LsAAjF2E1"
+			]
+		},
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		},
+		"tests/PropertyManagement_test.sol": {
+			"keccak256": "0x06da606d330d01cb524d8ad6a5e5c3160a2a1007dcf669126a130907596fc889",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://fbee86fbb0133da8d7b7f679d9ec36a55bdf1b40ff09e1206813ee9c0c2ba12b",
+				"dweb:/ipfs/QmSC9x4RUSie5mbvq8JWvTxtcxU3gHDMFhEcuskaa1Z2mc"
+			]
+		}
+	},
+	"version": 1
+}

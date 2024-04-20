@@ -1,10 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.7.0 <0.9.0;
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
 import "./PropertyManagement.sol";
+import "https://github.com/ConsenSysMesh/openzeppelin-solidity/blob/master/contracts/math/SafeMath.sol";
 
-contract PropertyReservation {
-    // Referință către contractul de administrare a proprietăților
+contract PropertyReservation is ERC721 {
+    using SafeMath for uint256;
+
     PropertyManagement public propertyManagement;
     struct Booking {
         uint256 id;
@@ -16,23 +19,19 @@ contract PropertyReservation {
         address bookerAddr;
     }
 
-    // Evenimente
     event ReservationCreated(address indexed user, uint propertyId);
     mapping(uint => Booking) public bookings;
     uint256 public bookingCount;
 
-    // Constructor - inițializează contractul cu referința către contractul de administrare a proprietăților
-    constructor(PropertyManagement _propertyManagement) {
+    constructor(PropertyManagement _propertyManagement) ERC721("PropertyReservation", "PROP") {
         propertyManagement = _propertyManagement;
     }
 
-    // Modifier pentru a restricționa accesul doar pentru utilizatorii autentificați
     modifier onlyAuthenticated() {
         require(msg.sender != address(0), "User not authenticated.");
         _;
     }
 
-    // Funcție pentru rezervarea unei proprietăți
     function reserveProperty(uint _propertyId, uint startDate, uint endDate) external onlyAuthenticated {
         require(startDate <= endDate, "Invalid period: start date must be before end date");
 
@@ -47,10 +46,8 @@ contract PropertyReservation {
         propertyManagement.bookProperty(_propertyId, startDate, endDate);
 
         uint256 totalDays = (endDate - startDate) / 1 days + 1;
-        uint256 totalPrice = totalDays * property.pricePerNight;
+        uint256 totalPrice = totalDays.mul(property.pricePerNight);
 
-        // Increment booking count and create the booking
-        
         bookings[bookingCount] = Booking({
             id: bookingCount,
             propertyId: _propertyId,
@@ -61,11 +58,10 @@ contract PropertyReservation {
             bookerAddr: msg.sender
         });
 
-        bookingCount += 1;
-        // Creăm rezervarea
+        _mint(msg.sender, bookingCount); // Emiterea unui token ERC721 pentru fiecare rezervare
+        bookingCount = bookingCount.add(1);
         emit ReservationCreated(msg.sender, _propertyId);
     }
-
 
     function getMyBookings(address myAddress) public view returns (Booking[] memory) {
         uint count = 0;
@@ -78,7 +74,6 @@ contract PropertyReservation {
             }
         }
 
-        // Create a new array with the exact size needed
         Booking[] memory filteredBookings = new Booking[](count);
         for (uint i = 0; i < count; i++) {
             filteredBookings[i] = tempBookings[i];
@@ -96,5 +91,4 @@ contract PropertyReservation {
 
         return tempBookings;
     }
-    
 }
