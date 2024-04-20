@@ -1,0 +1,220 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_propertyManagementAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_pricePerNight",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_latitude",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_longitude",
+						"type": "int256"
+					}
+				],
+				"name": "addProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "propertyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					}
+				],
+				"name": "bookProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLatestPrice",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_propertyId",
+						"type": "uint256"
+					}
+				],
+				"name": "getProperty",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "int256",
+								"name": "latitude",
+								"type": "int256"
+							},
+							{
+								"internalType": "int256",
+								"name": "longitude",
+								"type": "int256"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pricePerNight",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "startDate",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "endDate",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct PropertyManagement.Period[]",
+								"name": "bookedPeriods",
+								"type": "tuple[]"
+							}
+						],
+						"internalType": "struct PropertyManagement.Property",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_propertyId",
+						"type": "uint256"
+					}
+				],
+				"name": "removeProperty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PropertyManagement.sol": "PropertyManagementProxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xa427f50c41729a49ce9b7182b4f90581eb78e60374e86850ed4683ba2713b8e1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3babff0dcc41be57282741b2febe48f1df1027b92532e0e17d6e354fc981048c",
+				"dweb:/ipfs/QmU7Nb8i2bs2ZNYepWucKiE2e6F9xyGf6QNqVcCX7uZAxD"
+			]
+		},
+		"contracts/PropertyManagement.sol": {
+			"keccak256": "0x77ae1399ef93c7bb87f4d88d0071a71a8e60ded0ab71ad713b87b6bc063313ec",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://cbcb0242506890ef84dd77e9f9e4d3251d1fcda746ce1d96247ca7ff6f729884",
+				"dweb:/ipfs/QmWWdj2iGhddMUqBm6CGXkj8NpEkeLKygQkQmYJCSnGijX"
+			]
+		}
+	},
+	"version": 1
+}

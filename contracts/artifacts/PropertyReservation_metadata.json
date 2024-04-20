@@ -820,12 +820,20 @@
 		"remappings": []
 	},
 	"sources": {
+		"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xa427f50c41729a49ce9b7182b4f90581eb78e60374e86850ed4683ba2713b8e1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3babff0dcc41be57282741b2febe48f1df1027b92532e0e17d6e354fc981048c",
+				"dweb:/ipfs/QmU7Nb8i2bs2ZNYepWucKiE2e6F9xyGf6QNqVcCX7uZAxD"
+			]
+		},
 		"contracts/PropertyManagement.sol": {
-			"keccak256": "0x1d02c20ceec99cc05aeb5cf5c731d2f2bff719c021b934e366ab9e078d4907a6",
+			"keccak256": "0xe76c281f7ef84e684110bc8c61b2486385a16a398298d6c43ae57979841473c4",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b23921a47bbb921176e1b65113b05b722ba745eb27f9c2fe63ef2878be681b7d",
-				"dweb:/ipfs/QmQa7MoKxnUmD6BSaQLSkAe6dee8rtHsLLKQ6LsAAjF2E1"
+				"bzz-raw://52027646bd856f0fb7e979fb7d1563ae0efbfab031dd5e4318d9182f625b8043",
+				"dweb:/ipfs/QmP955d1DP3TqSjAqnY378meTCETYtscfvzmUgAYNaH4yU"
 			]
 		},
 		"contracts/PropertyReservation.sol": {
@@ -837,10 +845,11 @@
 			]
 		},
 		"https://github.com/ConsenSysMesh/openzeppelin-solidity/blob/master/contracts/math/SafeMath.sol": {
-			"keccak256": "0xf377a7fe13a4eab812a35cce60ea80f8804f0d7e52941d1471c88098e48f948b",
+			"keccak256": "0xe2e4ea416bed5d8cbac24020d49f6a462d0dcdcae516ab20da5356328f52897a",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://983e391bd8d9f1d686303597c86a7554882820fff40bcb9533b95a26dac192d9",
-				"dweb:/ipfs/QmeUkDez7wSC5JMXmiKNiPbnMpDjSrovEVWZtYLZaeLxki"
+				"bzz-raw://a11fc6819166540c70dbc2e5908d7adf7b7c7124f78d5e89d156ec1510c4acd3",
+				"dweb:/ipfs/QmQWMkCYwGi3AnHW6pSc5PbB4BxHPqLevJqZgNJxhimvut"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/interfaces/draft-IERC6093.sol": {

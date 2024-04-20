@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -103,6 +108,19 @@
 				"name": "bookProperty",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLatestPrice",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -281,12 +299,20 @@
 		"remappings": []
 	},
 	"sources": {
+		"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xa427f50c41729a49ce9b7182b4f90581eb78e60374e86850ed4683ba2713b8e1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3babff0dcc41be57282741b2febe48f1df1027b92532e0e17d6e354fc981048c",
+				"dweb:/ipfs/QmU7Nb8i2bs2ZNYepWucKiE2e6F9xyGf6QNqVcCX7uZAxD"
+			]
+		},
 		"contracts/PropertyManagement.sol": {
-			"keccak256": "0x1d02c20ceec99cc05aeb5cf5c731d2f2bff719c021b934e366ab9e078d4907a6",
+			"keccak256": "0x77ae1399ef93c7bb87f4d88d0071a71a8e60ded0ab71ad713b87b6bc063313ec",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b23921a47bbb921176e1b65113b05b722ba745eb27f9c2fe63ef2878be681b7d",
-				"dweb:/ipfs/QmQa7MoKxnUmD6BSaQLSkAe6dee8rtHsLLKQ6LsAAjF2E1"
+				"bzz-raw://cbcb0242506890ef84dd77e9f9e4d3251d1fcda746ce1d96247ca7ff6f729884",
+				"dweb:/ipfs/QmWWdj2iGhddMUqBm6CGXkj8NpEkeLKygQkQmYJCSnGijX"
 			]
 		}
 	},
